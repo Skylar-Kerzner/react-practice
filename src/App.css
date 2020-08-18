@@ -9,12 +9,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #6dbadd;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,6 +33,17 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(120deg);
   }
+}
+
+.title {
+  color: #c9f1bfb6;
+  padding: 10px;
+  fontFamily: Helvetica;
+}
+.paragraph {
+  color: #ffffff;
+  padding: 10px;
+  fontFamily: Georgia;
 }

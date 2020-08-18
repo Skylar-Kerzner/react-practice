@@ -40,10 +40,19 @@
 .title {
   color: #c9f1bfb6;
   padding: 10px;
-  fontFamily: Helvetica;
+  font-family: Helvetica;
 }
 .paragraph {
   color: #ffffff;
   padding: 10px;
-  fontFamily: Georgia;
+  font-family: Georgia;
+}
+
+h6 {
+  color: rgb(226, 220, 220)
+
+}
+
+.invisible {
+  color: #6dbadd
 }

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import MyComponent from './MyComponent.js';
+import FormComponent from './FormComponent';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <p>
           Welcome to this React App.
         </p>
-
+        <FormComponent></FormComponent>
         <MyComponent greeting="Thank you for your time" audience=""></MyComponent>
       </header>
     </div>

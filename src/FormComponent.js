@@ -26,7 +26,8 @@ class FormComponent extends Component {
     thenGetImage(url) {
         const response = fetch(url)
         .then(response => response.json())
-        .then(data => 
+        .then(data => data.errors == "No photos found." ?
+            $( 'div.image_holder' ).append('No related photos found. <br><br>')  :
             this.setState({
             image_url: data.urls.small,
             html_link: data.links.html,
@@ -41,9 +42,9 @@ class FormComponent extends Component {
         console.log(this.state)
         $( 'h3' ).remove()
         $ ('#form1').remove()
-        $( 'div.submit_holder' ).append('Submitted. <br><br>')
+        $( 'div.submit_holder' ).append('<h3> Search submitted. </h3> <br><br>')
         const url = 'https://api.unsplash.com/photos/random?' + 'client_id=' + this.state.unsplashApiKey + '&query=' + this.state.field1
-        $( 'div.submit_holder' ).append(url+'<br><br>')
+        $( 'div.submit_holder' )//.append(url+'<br><br>')
         this.thenGetImage(url)
     }
 
@@ -66,20 +67,21 @@ class FormComponent extends Component {
                             form="form1"
                             value="Submit"
                             onChange={this.changeHandler}
-                        >Submit</button>
+                        >Find a photo!</button>
                     </div>
                 </form>
                 <h3> {field1} </h3>
+                {/*
                 <div class="debug_holder">
                     {isImageReady ? <h6>{this.state.image_url}</h6> : <h6>debug will go here</h6>} 
-                </div>
+                </div> */}
                 <div class="submit_holder"></div>
                 
                 <div class="image_holder"> 
-                    {isImageReady ? <img src={this.state.image_url} /> : <h6>image will go here</h6>} 
+                    {isImageReady ? <img src={this.state.image_url} /> : <h6></h6>} 
                 </div>
                 <div class="link_holder invisible">
-                    {isImageReady ? <h6>{this.state.html_link}</h6> : <h6>link will go here</h6>} 
+                    {isImageReady ? <h6>{this.state.html_link}</h6> : <h6></h6>} 
                 </div>
                 
             </div>

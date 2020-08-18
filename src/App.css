@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 15s linear;
+    animation: App-logo-spin infinite 19s linear;
   }
 }
 
@@ -33,7 +33,7 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(120deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -58,8 +58,10 @@ h3 {
 
 }
 
-
+.description_holder {
+  font-weight: bold;
+}
 
 .invisible {
-  color: #6dbadd
+  color: #6dbadd;
 }
